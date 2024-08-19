@@ -14,7 +14,7 @@ const ContactSection = () => {
         setSuccess('');
 
         try {
-            const response = await axios.post('http://localhost:5000/send-email', formData);
+            const response = await axios.post('portfolio-backend-production-e1af.up.railway.app/send-email', formData);
             setSuccess('Message sent successfully');
         } catch (error) {
             setError('Failed to send message');
