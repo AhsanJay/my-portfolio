@@ -1,0 +1,30 @@
+ /* Hero Section Styles */
+ .hero {
+    margin: 50px 0;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+
+.hero h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #74ebd5;
+  color: white;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #9face6;
+}

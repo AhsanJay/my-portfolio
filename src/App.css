@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
@@ -12,8 +16,23 @@ body {
   line-height: 1.6;
 }
 
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  margin: 50px 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+}
+
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
   padding: 20px;
 }
 
@@ -22,77 +41,19 @@ a {
   color: inherit;
 }
 
-/* Header Styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-header nav ul li {
-  padding: 10px 20px;
-  background-color: #9face6;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-header nav ul li:hover {
-  background-color: #74ebd5;
-}
-
-/* Hero Section Styles */
-.hero {
-  margin: 50px 0;
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: #333;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: 20px 0;
-}
-
-.cta-button {
-  padding: 15px 30px;
-  background-color: #74ebd5;
-  color: white;
-  border-radius: 30px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #9face6;
-}
-
+ 
 /* Section Styles */
+
+section:hover {
+  transform: scale(1.06);
+}
+
 section {
   margin: 40px 0;
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
+  transition: transform 1s;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -125,6 +86,18 @@ h2 {
 }
 
 /* Experience Item */
+.experience-item ul {
+  text-align: left;
+  padding: 30px 150px;
+}
+
+@media (max-width: 768px) {
+  .experience-item ul {
+    text-align: left;
+    padding: 30px 6px;
+  }
+}
+
 .experience-item {
   padding: 20px;
   background-color: #9face6;
@@ -149,6 +122,8 @@ h2 {
 
 .project-link {
   display: inline-block;
+  position: sticky;
+  top: 100%;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #74ebd5;
